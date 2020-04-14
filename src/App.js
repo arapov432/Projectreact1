@@ -4,6 +4,7 @@ import './App.css';
 import Welcome from "./components/Welcome";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import NestedLink from './components/NestedLink';
 function App() {
   return (
     <div className="container-fluid">
@@ -23,6 +24,9 @@ function App() {
    <li>
      <Link to="/contact">Contact</Link>
    </li>
+   <li>
+     <Link to="/nested">Nested Link</Link>
+   </li>
    </ul>
    <Switch>
      <Route exact path="/">
@@ -33,6 +37,9 @@ function App() {
      </Route>
      <Route path = "/contact">
        <Contact />
+     </Route>
+     <Route path = "/nested">
+       <NestedLink />
      </Route>
    </Switch>
     </Router>    
